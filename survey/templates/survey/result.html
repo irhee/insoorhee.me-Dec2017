@@ -1,0 +1,26 @@
+{% extends "webapp/header.html" %}
+
+{% block content %}
+  <legend>{{area}}</legend>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td><B>id Number</B></td>
+        <td><B>Name</B></td>
+        <td><B>Country</B></td>
+        <td><B>Voting Count</B></td>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for candidate in candidates %}
+      <tr>
+            <td><B>{{candidate.id}}</B></td>
+            <td><B>{{candidate.name}}</B></td>
+            <td><B>{{candidate.country}}</B></td>
+            <td><B>{{candidate.vote}}</B></td>
+      </tr>
+      {%  endfor %}
+
+  </table>
+{%  endblock %}

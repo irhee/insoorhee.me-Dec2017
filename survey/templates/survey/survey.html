@@ -1,0 +1,29 @@
+{% extends "webapp/header.html" %}
+
+{% block content %}
+  <legend>Choose your favorite leader</legend>
+  <table class="table table-striped">
+      <thead>
+      <tr>
+        <td><B>id Number</B></td>
+        <td><B>Name</B></td>
+        <td><B>Country</B></td>
+        <td><B>Vote</B></td>
+      </tr>
+      </thead>
+      <tbody>
+        {% for candidate in candidates %}
+        <tr>
+          <td>{{candidate.id}}</td>
+          <td>{{candidate.name}}</td>
+          <td>{{candidate.country}}</td>
+          <td>
+              <form action = "result/{{candidate.id}}/" method="post">
+              {% csrf_token %}
+              <button class='btn-default ' data-toggle="button" aria-pressed="false" autocomplete="off" name="choice" value="{{candidate.id}}">Vote</button>
+              </form>
+          </td>
+        </tr>
+        {% endfor %}
+  </table>
+{%  endblock %}

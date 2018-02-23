@@ -1,0 +1,7 @@
+{% extends "webapp/header.html" %}
+
+{% block content %}
+  {% for post in posts %}
+    <h2>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}">{{post.title}}</a></2h>
+  {% endfor %}
+{%  endblock %}

@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'webapp/img/favicon.ico' %}" />
+	<title>InsooRhee</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{% static 'webapp/css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'webapp/css/font-awesome.min.css' %}"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	<style>
+	p.cursive {
+	    font-family: cursive;
+	    color: #ff3300;
+	}
+	</style>
+</head>
+<nav class="navbar navbar-default">
+		<div class="container-fluid">
+
+				<!-- Logo -->
+				<div class="navbar-header">
+						<a href='/' class="navbar-brand">InsooRhee</a>
+				</div>
+
+				<!-- Menu Items -->
+				<div>
+						<ul class="nav navbar-nav">
+								<li><a href='/'>Home</a></li>
+								<li><a href='/blog/'>Blog</a></li>
+								<li><a href='/contact/'>Contact</a></li>
+								<li><a href='/survey/'>Survey</a></li>
+						</ul>
+				</div>
+
+		</div>
+
+</nav>
+
+<body class="body" style="background-color:#f6f6f6">
+
+			<div class='container-fluid'>
+			<div class="jumbotron">
+			  {% block content %}
+			  {% endblock %}
+			</div>
+			</div>
+
+</body>
+	<footer>
+		<div class="container-fluid" align='center'>
+			<p><a href="https://www.facebook.com/insoor" target="blank">Facebook</a> | <a href="https://www.linkedin.com/in/insoorhee/" target="blank">LinkedIn</a> | <a href="https://github.com/irhee" target="blank">GitHub</a> | <a href="https://www.hackerrank.com/insoorhee" target="blank">HackerRank</a></p>
+		</div>
+	</footer>
+
+</html>

@@ -1,0 +1,55 @@
+{% extends "webapp/header.html" %}
+
+{% block content %}
+<form class="form-horizontal" id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+
+<legend>This page is not working properly yet</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="name"></label>
+  <div class="col-md-4">
+  <input id="name" name="name" type="text" placeholder="Full Name" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email"></label>
+  <div class="col-md-4">
+  <input id="email" name="email" type="text" placeholder="Email Address" class="form-control input-md" required="">
+
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Subject"></label>
+  <div class="col-md-4">
+  <input id="subject" name="subject" type="text" placeholder="Subject" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Message"></label>
+  <div class="col-md-4">
+    <textarea class="form-control" id="msg" name="msg" cols="6" rows="6" placeholder="Message"></textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary">Send Message</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+{% endblock %}
